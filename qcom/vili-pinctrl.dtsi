@@ -148,6 +148,19 @@
 	};
 
 	ts_mux {
+	        ts_cs_active: ts_cs_active {
+	                mux {
+	                        pins = "gpio51";
+	                        function = "qup11";
+	                };
+	                
+	                config {
+	                        pins = "gpio51";
+	                        drive-strength = <6>;
+	                        bias-pull-up;
+	                };
+	        };
+	        
 		ts_cs_suspend: ts_cs_suspend {
 			mux {
 				pins = "gpio51";
